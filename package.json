@@ -1,0 +1,23 @@
+{
+  "name": "pact-jest-poc",
+  "version": "1.0.0",
+  "description": "Jest Pact example",
+  "main": "client/index.js",
+  "scripts": {
+    "test:client": "jest client/index.spec.js --setupFiles ./pactSetup.js --setupTestFrameworkScriptFile ./pactTestWrapper.js ",
+    "pact:publish": "node ./publish.js",
+    "test:server": "node server/verifyPacts.js"
+  },
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact": "^7.0.4",
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4"
+  }
+}

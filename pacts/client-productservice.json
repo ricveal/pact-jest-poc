@@ -1,0 +1,33 @@
+{
+  "consumer": {
+    "name": "Client"
+  },
+  "provider": {
+    "name": "ProductService"
+  },
+  "interactions": [
+    {
+      "description": "a request to retrieve product list",
+      "providerState": "it has one product",
+      "request": {
+        "method": "GET",
+        "path": "/products"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": [
+          {
+            "name": "Foo"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
